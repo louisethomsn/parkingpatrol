@@ -1,0 +1,289 @@
+/*Asset grid*/
+
+@font-face {
+  font-family: "Changa One";
+  src: url(fonts/webfontkit-20211027-072523/changaone-regular-webfont.woff2)
+    format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7e6f7;
+}
+
+h1 {
+  font-family: "Changa One";
+  font-size: 3rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: "Changa One";
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  gap: 2px;
+}
+
+nav {
+  background-color: #386c7c;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  gap: 25px;
+  overflow-x: auto;
+}
+
+nav li {
+  padding: 10px;
+  font-family: "Changa One";
+  /* font-style: italic; */
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fbe91d;
+}
+
+a:hover {
+  color: #b56d1a;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+  line-height: 1.6rem;
+}
+
+.grid a {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1rem;
+  text-decoration: underline;
+  line-height: 1.6rem;
+}
+.grid a:hover {
+  color: #b56d1a;
+}
+
+.h2_index {
+  border-style: ridge;
+  border-color: #386c7c;
+}
+
+.forside {
+  border-style: ridge;
+  border-color: #386c7c;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* baggrundsbillede forside */
+#forside_billede {
+  grid-column: 1/4;
+  width: 100%;
+  height: 100vh;
+  background-image: url(svg/titel.svg);
+  background-size: cover;
+  background-position: 1% 1%;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  header nav ul {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    gap: 25px;
+    overflow-x: auto;
+  }
+  .index {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    margin: 0 auto;
+  }
+
+  .grid {
+    grid-column: 2/3;
+  }
+
+  .grid a {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    text-decoration: underline;
+  }
+  .grid a:hover {
+    color: #b56d1a;
+  }
+
+  .h2_index {
+    border-style: ridge;
+    border-color: #386c7c;
+  }
+
+  .forside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-style: ridge;
+    border-color: #386c7c;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #spil img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+    padding: 1rem;
+  }
+
+  #startskaerm img {
+    padding: 1rem;
+  }
+
+  .elementer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+
+  .elementer img {
+    max-height: 300px;
+  }
+
+  #UI {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 50px;
+  }
+
+  .col1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    object-fit: cover;
+  }
+
+  .UI1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .knapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .knapper2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .col2 img {
+    height: 800px;
+    padding: 20px;
+    object-fit: cover;
+  }
+
+  /*dokumentation*/
+
+  #spilkoncept img {
+    padding: 1rem;
+  }
+
+  .inspibilleder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    gap: 3rem;
+  }
+
+  #proces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .titelskaerm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .titelskaerm img {
+    max-width: 100%;
+    object-fit: fill;
+  }
+
+  .spilskaerm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  #diagrammer {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .farvetyp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .farvetyp img {
+    height: 300px;
+    width: 300px;
+  }
+}

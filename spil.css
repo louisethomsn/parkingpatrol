@@ -1,0 +1,828 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* nav */
+nav {
+  background-color: #386c7c;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  gap: 25px;
+  overflow-x: auto;
+}
+
+nav li {
+  padding: 10px;
+  font-family: "Changa One";
+  /* font-style: italic; */
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fbe91d;
+}
+
+a:hover {
+  color: #b56d1a;
+}
+
+#screen {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+}
+
+#game {
+  /*  outline: 2px dotted red; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#regler {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/regler.svg);
+  background-size: cover;
+}
+
+#play {
+  position: absolute;
+  aspect-ratio: 87.95/67.08;
+  width: 6%;
+  top: 73%;
+  left: 72%;
+  background-image: url(svg/play.svg);
+}
+
+#start_knap {
+  position: absolute;
+  aspect-ratio: 331.5/121.9;
+  width: 18%;
+  top: 40%;
+  left: 42%;
+  background-image: url(svg/start.svg);
+  cursor: url(svg/target2.png), auto;
+}
+
+#lydtil {
+  position: absolute;
+  aspect-ratio: 87.95/67.08;
+  width: 7%;
+  top: 3%;
+  left: 2%;
+  background-image: url(svg/lydtil.svg);
+}
+
+#lydfra {
+  position: absolute;
+  aspect-ratio: 87.95/67.08;
+  width: 7%;
+  top: 3%;
+  left: 2%;
+  background-image: url(svg/lydfra.svg);
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/titel.svg);
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "Changa One";
+  src: url(webfontkit-20211111-050824/changaone-regular-webfont.woff2);
+}
+
+#game_over_points {
+  position: absolute;
+  top: 44%;
+  left: 17.6%;
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Changa One";
+}
+
+#genstart1 {
+  position: absolute;
+  aspect-ratio: 388.37/127.41;
+  width: 18%;
+  top: 75%;
+  left: 42%;
+  background-image: url(svg/igen.svg);
+}
+
+#level_complete_points {
+  position: absolute;
+  top: 44%;
+  left: 17.6%;
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Changa One";
+}
+
+#genstart2 {
+  position: absolute;
+  aspect-ratio: 388.37/127.41;
+  width: 18%;
+  top: 75%;
+  left: 42%;
+  background-image: url(svg/igen.svg);
+}
+
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url(svg/gameover.svg);
+  background-size: cover;
+}
+
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/tillykke.svg);
+  background-size: cover;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/baggrund.svg);
+  background-size: cover;
+}
+
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(svg/forgrund.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+
+#game_ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#vagt_container1,
+#vagt_container2 {
+  width: 15%;
+  aspect-ratio: 336.71/493.73;
+  position: absolute;
+  /* top: 18%;
+  left: 18%; */
+  cursor: url(svg/target2.png), auto;
+}
+
+#vagt_sprite1,
+#vagt_sprite2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(svg/vagt.svg);
+  background-size: cover;
+  cursor: url(svg/target2.png), auto;
+}
+
+#gammeldame_container {
+  width: 5%;
+  aspect-ratio: 125.94/266.93;
+  position: absolute;
+  /* top: 70%;
+  left: 10%; */
+  cursor: url(svg/target2.png), auto;
+}
+
+#gammeldame_sprite {
+  height: 100%;
+  width: 100%;
+  background-image: url(svg/gammeldame.svg);
+  background-size: cover;
+  cursor: url(svg/target2.png), auto;
+}
+
+#lillepige_container {
+  width: 7%;
+  aspect-ratio: 7/8;
+  position: absolute;
+  /* top: 30%;
+  left: 90%; */
+  cursor: url(svg/target2.png), auto;
+}
+
+#lillepige_sprite {
+  height: 100%;
+  width: 100%;
+
+  background-image: url(svg/pige.svg);
+  background-size: cover;
+  cursor: url(svg/target2.png), auto;
+}
+
+#time_board {
+  position: absolute;
+  width: 8%;
+  aspect-ratio: 152/152;
+  top: 58%;
+  left: 90.16%;
+  background-image: url(svg/viser.svg);
+  background-size: cover;
+}
+
+.time {
+  animation-name: time_kf;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+
+@keyframes time_kf {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#score_board {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 400/150;
+  top: 44%;
+  left: 94.2%;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#energy_board {
+  position: absolute;
+  width: 5%;
+  /* aspect-ratio: 27/25; */
+  top: 50.5%;
+  left: 93%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+/* #energy_board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+} */
+/* 
+#liv1{
+
+}
+
+#liv2
+
+#liv3 */
+
+.liv {
+  background-image: url(svg/hjerte.svg);
+  background-size: cover;
+  width: 35%;
+  aspect-ratio: 26.79/25.02;
+}
+
+.fjernet {
+  display: none;
+}
+
+/******************   speed  ************************/
+
+.speed1 {
+  animation-duration: 7s;
+}
+
+.speed2 {
+  animation-duration: 4s;
+}
+
+.speed3 {
+  animation-duration: 3s;
+}
+
+/******************   animationer vagt  ************************/
+
+.vagt1 {
+  animation-name: vagt1_kf;
+  /* animation-duration: 3s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes vagt1_kf {
+  0% {
+    transform: translate(800%, 10%);
+  }
+  5% {
+    transform: translate(500%, 10%);
+  }
+  10% {
+    transform: translate(220%, 20%);
+  }
+
+  15% {
+    transform: translate(300%, 30%);
+  }
+
+  20% {
+    transform: translate(220%, 15%);
+  }
+
+  60% {
+    transform: translate(300%, 40%);
+  }
+
+  70% {
+    transform: translate(220%, 80%);
+  }
+
+  80% {
+    transform: translate(300%, 30%);
+  }
+  100% {
+    transform: translate(250%, 180%);
+  }
+}
+
+.vagt2 {
+  animation-name: vagt2_kf;
+  /* animation-duration: 3s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes vagt2_kf {
+  0% {
+    transform: translate(800%, 10%);
+  }
+  20% {
+    transform: translate(500%, 10%);
+  }
+  40% {
+    transform: translate(220%, 20%);
+  }
+
+  60% {
+    transform: translate(300%, 30%);
+  }
+
+  65% {
+    transform: translate(300%, 40%);
+  }
+
+  80% {
+    transform: translate(220%, 80%);
+  }
+
+  95% {
+    transform: translate(300%, 80%);
+  }
+  100% {
+    transform: translate(250%, 180%);
+  }
+}
+
+.vagt3 {
+  animation-name: vagt3_kf;
+  /* animation-duration: 2s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes vagt3_kf {
+  0% {
+    transform: translate(800%, 10%);
+  }
+
+  20% {
+    transform: translate(400%, 10%);
+  }
+
+  40% {
+    transform: translate(300%, 20%);
+  }
+
+  60% {
+    transform: translate(300%, 40%);
+  }
+
+  80% {
+    transform: translate(300%, 80%);
+  }
+  100% {
+    transform: translate(250%, 180%);
+  }
+}
+
+.vagt4 {
+  animation-name: vagt4_kf;
+  /* animation-duration: 2s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes vagt4_kf {
+  0% {
+    transform: translate(-100%, 40%);
+  }
+
+  10% {
+    transform: translate(100%, 40%);
+  }
+
+  20% {
+    transform: translate(200%, 40%);
+  }
+
+  40% {
+    transform: translate(400%, 15%);
+  }
+
+  50% {
+    transform: translate(600%, 10%);
+  }
+
+  60% {
+    transform: translate(600%, 100%);
+  }
+
+  70% {
+    transform: translate(600%, 180%);
+  }
+
+  80% {
+    transform: translate(500%, 200%);
+  }
+  90% {
+    transform: translate(450%, 200%);
+  }
+  100% {
+    transform: translate(250%, 180%);
+  }
+}
+
+/******************   animationer gammel dame  ************************/
+
+.gammeldame1 {
+  animation-name: gammeldame1_kf;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 70%;
+  left: 10%;
+}
+
+@keyframes gammeldame1_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  25% {
+    transform: translate(600%, -10%);
+  }
+
+  50% {
+    transform: translate(700%, -150%);
+  }
+
+  75% {
+    transform: translate(950%, -220%);
+  }
+
+  100% {
+    transform: translate(1700%, -220%);
+  }
+}
+
+.gammeldame2 {
+  animation-name: gammeldame2_kf;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 70%;
+  left: 10%;
+}
+
+@keyframes gammeldame2_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  25% {
+    transform: translate(500%, -10%);
+  }
+
+  50% {
+    transform: translate(700%, -100%);
+  }
+
+  75% {
+    transform: translate(400%, -140%);
+  }
+
+  100% {
+    transform: translate(-200%, -140%);
+  }
+}
+
+.gammeldame3 {
+  animation-name: gammeldame3_kf;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 70%;
+  left: 10%;
+}
+
+@keyframes gammeldame3_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  25% {
+    transform: translate(500%, -10%);
+  }
+
+  50% {
+    transform: translate(700%, -100%);
+  }
+
+  75% {
+    transform: translate(700%, -230%);
+  }
+
+  100% {
+    transform: translate(840%, -260%);
+  }
+}
+
+/******************   animationer lillepige  ************************/
+
+.lillepige1 {
+  animation-name: lillepige1_kf;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 30%;
+  left: 90%;
+}
+
+@keyframes lillepige1_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  20% {
+    transform: translate(60%, 100%);
+  }
+
+  40% {
+    transform: translate(60%, 300%);
+  }
+  50% {
+    transform: translate(60%, 420%);
+  }
+  60% {
+    transform: translate(-200%, 420%);
+  }
+  70% {
+    transform: translate(-400%, 420%);
+  }
+
+  80% {
+    transform: translate(-600%, 300%);
+  }
+  90% {
+    transform: translate(-1000%, 100%);
+  }
+
+  100% {
+    transform: translate(-1400%, 100%);
+  }
+}
+
+.lillepige2 {
+  animation-name: lillepige2_kf;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 30%;
+  left: 90%;
+}
+
+@keyframes lillepige2_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  20% {
+    transform: translate(-200%, -10%);
+  }
+
+  40% {
+    transform: translate(-400%, -10%);
+  }
+  50% {
+    transform: translate(-500%, 30%);
+  }
+  60% {
+    transform: translate(-600%, 80%);
+  }
+  70% {
+    transform: translate(-700%, 80%);
+  }
+
+  80% {
+    transform: translate(-900%, 80%);
+  }
+  90% {
+    transform: translate(-1000%, 80%);
+  }
+
+  100% {
+    transform: translate(-1400%, 80%);
+  }
+}
+
+.lillepige3 {
+  animation-name: lillepige3_kf;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 30%;
+  left: 90%;
+}
+
+@keyframes lillepige3_kf {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  20% {
+    transform: translate(-200%, 10%);
+  }
+
+  40% {
+    transform: translate(-400%, 10%);
+  }
+  50% {
+    transform: translate(-500%, 20%);
+  }
+  60% {
+    transform: translate(-600%, 50%);
+  }
+
+  80% {
+    transform: translate(-600%, 200%);
+  }
+  100% {
+    transform: translate(-600%, 400%);
+  }
+}
+
+/******************   andre animationer  ************************/
+
+.frys {
+  animation-play-state: paused;
+  animation-fill-mode: both;
+}
+
+.zoom_out {
+  transform: scale(0, 0);
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.drej {
+  animation-name: drej_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes drej_kf {
+  0% {
+    transform: rotate(0) scale(100%);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(0%);
+  }
+}
+
+.forsvind {
+  animation-name: forsvind_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes forsvind_kf {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/******************   positioner  ************************/
+
+.posvagt {
+  top: 0%;
+  left: 0%;
+}
+
+.poslillepige {
+  top: 30%;
+  left: 90%;
+}
+
+.posgammeldame {
+  top: 70%;
+  left: 10%;
+}
+
+/******************   delay  ************************/
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.5s;
+}
+
+.delay3 {
+  animation-delay: 1s;
+}
+
+.delay4 {
+  animation-delay: 1.5s;
+}
+
+@media (min-width: 600px) {
+  header nav ul {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    gap: 25px;
+    overflow-x: auto;
+  }
+}

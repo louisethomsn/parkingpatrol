@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Patrol</title>
+    <link rel="stylesheet" href="spil.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Hjem</a>
+          </li>
+          <li>
+            <a href="spil.html">Spillet</a>
+          </li>
+          <li>
+            <a href="assets.html#startskaerm">Assetliste</a>
+          </li>
+          <li>
+            <a href="dokumentation.html">Dokumentation og Idé</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+      <div id="screen" class="">
+        <div id="game">
+          <div id="game_background"></div>
+          <div id="game_elements">
+            
+            <div id="vagt_container1" class="">
+              <div id="vagt_sprite1" ></div>
+            </div>
+            <div id="vagt_container2" class="">
+              <div id="vagt_sprite2" ></div>
+            </div>
+            <div id="gammeldame_container" class="">
+              <div id="gammeldame_sprite"></div>
+            </div>
+            <div id="lillepige_container" class="">
+              <div id="lillepige_sprite" ></div>
+          </div>
+          
+          <div id="game_foreground"></div>
+          
+          <div id="game_ui">
+            <div id="time_board"></div>
+            <div id="score_board">
+              <p>17</p>
+            </div>
+            <div id="energy_board">
+              <div class="liv" id="liv1"></div>
+              <div class="liv" id="liv2"></div>
+              <div class="liv" id="liv3"></div>
+            </div>
+          </div>
+        </div>
+        <div id="regler" class="">
+          <div id="play" class=""></div>
+        </div>
+        
+        <div id="start" class="">
+          <div id="start_knap"></div>
+          <div id="lydtil"></div>
+          <div id="lydfra"></div>
+        </div>
+        <div id="game_over" class="">
+          <div id="game_over_points">
+          Du fik <span id="point_antal">??</span> point
+        </div>
+          <div id="genstart1"></div>
+        </div>
+        <div id="level_complete"class="">
+          <div id="level_complete_points">
+          Du fik <span id="point_antal2">??</span> point
+        </div>
+          <div id="genstart2"></div>
+        </div>
+      </div>
+      <div id="sounds">
+      <audio src="sounds/Vagt.mp3" id="sound_vagt" ></audio>
+      <audio src="sounds/Lillepige.mp3" id="sound_pige" ></audio>
+      <audio src="sounds/Gammeldame.mp3" id="sound_dame" ></audio>
+      <audio src="sounds/baggrundsmusik_mix.mp3" id="sound_mix" ></audio>
+      <audio src="sounds/parkeringsplads.mp3" id="sound_parkering" ></audio>
+
+      
+    </div>
+      <script src="script.js"></script>
+  </body>
+</html>
